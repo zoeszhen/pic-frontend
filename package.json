@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.16.2",
-    "material-css": "^0.7.0",
+    "materialize-css": "^0.100.2",
     "react": "^16.0.0",
     "react-axios": "^1.0.3",
     "react-dom": "^16.0.0",

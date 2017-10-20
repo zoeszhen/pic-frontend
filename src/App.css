@@ -26,3 +26,18 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.dropzone{
+  margin: 2% 0;
+  height: 100%;
+  border-width: 2px;
+  padding: 2%;
+  border-color: rgb(102, 102, 102);
+  border-style: dashed;
+  border-radius: 5px;
+}
+
+.dropzone > .instruction{
+  color: grey;
+  font-size: 2em;
+}
