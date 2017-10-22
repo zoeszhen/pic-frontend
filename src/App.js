@@ -19,7 +19,6 @@ class App extends Component {
   }
 
   onDrop = (acceptFile,rejectFile)=> {
-    console.log("this.defualtState",this.test);
     if(!acceptFile){
         return;
     }
@@ -77,7 +76,6 @@ class App extends Component {
         }
       }
     });
-    console.log("topPrecentage",topPrecentage);
     return topPrecentage;
   }
 
