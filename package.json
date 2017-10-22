@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "materialize-css": "^0.100.2",
+    "nodemon": "^1.12.1",
     "react": "^16.0.0",
     "react-axios": "^1.0.3",
     "react-dom": "^16.0.0",
@@ -14,6 +15,8 @@
     "recharts": "^1.0.0-alpha.6"
   },
   "scripts": {
+    "mocks": "dyson src/mocks 3001",
+    "watch-mocks": "nodemon --watch src/mocks --exec dyson src/mocks ",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
