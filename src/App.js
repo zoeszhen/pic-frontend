@@ -50,19 +50,20 @@ class App extends Component {
     Object.entries(res).forEach(([key, value]) =>{
       mappingRes.push({
         age: key,
-        prcentage: value
+        percentage: value
       })
     });
 
-   let final= mappingRes.reduce((groupRes, e, index)=>{
-      if (index % 10 === 0 && index !== 0){
-        groupRes.push([])
-      }
-      groupRes[groupRes.length - 1].push(e)
-      return groupRes
-    },[[]])
+  //  let final= mappingRes.reduce((groupRes, e, index)=>{
+  //     if (index % 10 === 0 && index !== 0){
+  //       groupRes.push([])
+  //     }
+  //     groupRes[groupRes.length - 1].push(e)
+  //     return groupRes
+  //   },[[]])
 
-    return final;
+    // return final;
+    return mappingRes;
   }
 
   topResult =(res)=>{
@@ -105,20 +106,14 @@ class App extends Component {
             <div>
                 <Row>
                 <h1>Result</h1>
-                <span>Your age: {Object.keys(this.state.res)}</span>
+                <span>Your are: {Object.keys(this.state.res)}</span>
               </Row>
 
               <h1>Details</h1>
 
-              {
-                this.state.dist.map((e,i)=>{
-                  return(
-                    <Row key={i}>
-                      <ChartCmp data={e} groupNumber={i}></ChartCmp>
-                    </Row>
-                  )
-                })
-              }
+              <Row>
+                <ChartCmp data={this.state.dist}></ChartCmp>
+              </Row>
 
             </div>
             
