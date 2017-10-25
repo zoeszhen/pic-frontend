@@ -30,9 +30,9 @@ class App extends Component {
   fileUpload =()=>{
     
      var formData = new FormData();
-     formData.append("File", this.state.file);
+     formData.append("image", this.state.file);
     //change here to real end point
-     axios.post('http://localhost:3001/image', formData)
+     axios.post('http://localhost:8080/image',formData)
      .then((res)=>{
         let {status} =res.data;
 
